@@ -36,7 +36,8 @@ export default function Register({ passwordRules }: Props) {
                                     tabIndex={1}
                                     autoComplete="name"
                                     name="name"
-                                    placeholder="Full name"
+                                    placeholder="Alex Rivera"
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError
                                     message={errors.name}
@@ -53,7 +54,8 @@ export default function Register({ passwordRules }: Props) {
                                     tabIndex={2}
                                     autoComplete="email"
                                     name="email"
-                                    placeholder="email@example.com"
+                                    placeholder="coach@fitnessos.com"
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError message={errors.email} />
                             </div>
@@ -68,6 +70,7 @@ export default function Register({ passwordRules }: Props) {
                                     name="password"
                                     placeholder="Password"
                                     passwordrules={passwordRules}
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError message={errors.password} />
                             </div>
@@ -84,6 +87,7 @@ export default function Register({ passwordRules }: Props) {
                                     name="password_confirmation"
                                     placeholder="Confirm password"
                                     passwordrules={passwordRules}
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError
                                     message={errors.password_confirmation}
@@ -92,7 +96,7 @@ export default function Register({ passwordRules }: Props) {
 
                             <Button
                                 type="submit"
-                                className="mt-2 w-full"
+                                className="mt-2 h-11 w-full rounded-full bg-brand-gradient text-primary-foreground shadow-glow transition hover:opacity-90"
                                 tabIndex={5}
                                 data-test="register-user-button"
                             >
@@ -115,6 +119,6 @@ export default function Register({ passwordRules }: Props) {
 }
 
 Register.layout = {
-    title: 'Create an account',
-    description: 'Enter your details below to create your account',
+    title: 'Create your workspace',
+    description: 'Start with secure access for your coaching command center.',
 };

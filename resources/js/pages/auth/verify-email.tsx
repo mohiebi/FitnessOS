@@ -12,7 +12,7 @@ export default function VerifyEmail({ status }: { status?: string }) {
             <Head title="Email verification" />
 
             {status === 'verification-link-sent' && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
+                <div className="mb-4 rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-center text-sm font-medium text-primary">
                     A new verification link has been sent to the email address
                     you provided during registration.
                 </div>
@@ -21,7 +21,10 @@ export default function VerifyEmail({ status }: { status?: string }) {
             <Form {...send.form()} className="space-y-6 text-center">
                 {({ processing }) => (
                     <>
-                        <Button disabled={processing} variant="secondary">
+                        <Button
+                            disabled={processing}
+                            className="h-11 rounded-full bg-brand-gradient px-6 text-primary-foreground shadow-glow transition hover:opacity-90"
+                        >
                             {processing && <Spinner />}
                             Resend verification email
                         </Button>

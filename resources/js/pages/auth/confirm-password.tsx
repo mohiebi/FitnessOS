@@ -37,6 +37,7 @@ export default function ConfirmPassword() {
                                 placeholder="Password"
                                 autoComplete="current-password"
                                 autoFocus
+                                className="h-11 rounded-xl border-border/60 bg-card/70"
                             />
 
                             <InputError message={errors.password} />
@@ -44,7 +45,7 @@ export default function ConfirmPassword() {
 
                         <div className="flex items-center">
                             <Button
-                                className="w-full"
+                                className="h-11 w-full rounded-full bg-brand-gradient text-primary-foreground shadow-glow transition hover:opacity-90"
                                 disabled={processing}
                                 data-test="confirm-password-button"
                             >
@@ -60,7 +61,7 @@ export default function ConfirmPassword() {
 }
 
 ConfirmPassword.layout = {
-    title: 'Confirm password',
+    title: 'Confirm secure access',
     description:
-        'This is a secure area of the application. Please confirm your password before continuing.',
+        'Confirm your password before continuing to protected workspace settings.',
 };

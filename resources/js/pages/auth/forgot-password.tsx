@@ -15,7 +15,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
             <Head title="Forgot password" />
 
             {status && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
+                <div className="mb-4 rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-center text-sm font-medium text-primary">
                     {status}
                 </div>
             )}
@@ -32,7 +32,8 @@ export default function ForgotPassword({ status }: { status?: string }) {
                                     name="email"
                                     autoComplete="off"
                                     autoFocus
-                                    placeholder="email@example.com"
+                                    placeholder="coach@fitnessos.com"
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
 
                                 <InputError message={errors.email} />
@@ -40,7 +41,7 @@ export default function ForgotPassword({ status }: { status?: string }) {
 
                             <div className="my-6 flex items-center justify-start">
                                 <Button
-                                    className="w-full"
+                                    className="h-11 w-full rounded-full bg-brand-gradient text-primary-foreground shadow-glow transition hover:opacity-90"
                                     disabled={processing}
                                     data-test="email-password-reset-link-button"
                                 >
@@ -64,6 +65,6 @@ export default function ForgotPassword({ status }: { status?: string }) {
 }
 
 ForgotPassword.layout = {
-    title: 'Forgot password',
-    description: 'Enter your email to receive a password reset link',
+    title: 'Reset your access',
+    description: 'Enter your email and we will send a recovery link.',
 };

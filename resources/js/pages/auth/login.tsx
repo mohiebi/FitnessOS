@@ -42,7 +42,8 @@ export default function Login({ status, canResetPassword }: Props) {
                                     autoFocus
                                     tabIndex={1}
                                     autoComplete="email"
-                                    placeholder="email@example.com"
+                                    placeholder="coach@fitnessos.com"
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError message={errors.email} />
                             </div>
@@ -67,11 +68,12 @@ export default function Login({ status, canResetPassword }: Props) {
                                     tabIndex={2}
                                     autoComplete="current-password"
                                     placeholder="Password"
+                                    className="h-11 rounded-xl border-border/60 bg-card/70"
                                 />
                                 <InputError message={errors.password} />
                             </div>
 
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center gap-3 rounded-xl border border-border/60 bg-card/50 px-3 py-2.5">
                                 <Checkbox
                                     id="remember"
                                     name="remember"
@@ -82,7 +84,7 @@ export default function Login({ status, canResetPassword }: Props) {
 
                             <Button
                                 type="submit"
-                                className="mt-4 w-full"
+                                className="mt-4 h-11 w-full rounded-full bg-brand-gradient text-primary-foreground shadow-glow transition hover:opacity-90"
                                 tabIndex={4}
                                 disabled={processing}
                                 data-test="login-button"
@@ -103,7 +105,7 @@ export default function Login({ status, canResetPassword }: Props) {
             </Form>
 
             {status && (
-                <div className="mb-4 text-center text-sm font-medium text-green-600">
+                <div className="mt-6 rounded-xl border border-primary/30 bg-primary/10 px-4 py-3 text-center text-sm font-medium text-primary">
                     {status}
                 </div>
             )}
@@ -112,6 +114,6 @@ export default function Login({ status, canResetPassword }: Props) {
 }
 
 Login.layout = {
-    title: 'Log in to your account',
-    description: 'Enter your email and password below to log in',
+    title: 'Welcome back',
+    description: 'Sign in to manage your coaching workspace and client app.',
 };
