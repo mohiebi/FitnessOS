@@ -52,21 +52,20 @@ export default function AuthSimpleLayout({
                             <Sparkles className="h-3.5 w-3.5" />
                             coaching command center
                         </div>
-                        <h1 className="mt-6 text-5xl font-semibold leading-[1.05] tracking-tight xl:text-6xl">
+                        <h1 className="mt-6 text-5xl leading-[1.05] font-semibold tracking-tight xl:text-6xl">
                             Run your fitness business from a calmer control
                             room.
                         </h1>
                         <p className="mt-5 max-w-lg text-base leading-7 text-muted-foreground">
-                            Secure access for coaches, clients, and teams
-                            using the same premium interface as the rest of
-                            FitnessOS.
+                            Secure access for coaches, clients, and teams using
+                            the same premium interface as the rest of FitnessOS.
                         </p>
 
                         <div className="mt-10 grid gap-3">
                             {proofPoints.map((point) => (
                                 <div
                                     key={point}
-                                    className="glass flex items-center gap-3 rounded-2xl px-4 py-3 text-sm"
+                                    className="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm glass"
                                 >
                                     <span className="grid h-8 w-8 shrink-0 place-items-center rounded-xl bg-primary/15 text-primary">
                                         <Check className="h-4 w-4" />
@@ -78,7 +77,7 @@ export default function AuthSimpleLayout({
                     </div>
 
                     <div className="relative z-10 grid grid-cols-2 gap-3">
-                        <div className="glass rounded-2xl p-4">
+                        <div className="rounded-2xl p-4 glass">
                             <ShieldCheck className="h-5 w-5 text-primary" />
                             <div className="mt-3 text-2xl font-semibold">
                                 2FA
@@ -87,7 +86,7 @@ export default function AuthSimpleLayout({
                                 Recovery-ready authentication
                             </div>
                         </div>
-                        <div className="glass rounded-2xl p-4">
+                        <div className="rounded-2xl p-4 glass">
                             <Users className="h-5 w-5 text-primary" />
                             <div className="mt-3 text-2xl font-semibold">
                                 248
@@ -120,7 +119,7 @@ export default function AuthSimpleLayout({
                             </Link>
                         </div>
 
-                        <div className="glass rounded-3xl p-6 shadow-card-premium sm:p-8">
+                        <div className="rounded-3xl p-6 shadow-card-premium glass sm:p-8">
                             <div className="mb-7 space-y-3">
                                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary">
                                     <ShieldCheck className="h-5 w-5" />

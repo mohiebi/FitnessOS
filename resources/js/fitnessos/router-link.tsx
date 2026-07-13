@@ -36,9 +36,12 @@ export function Link({
     return (
         <InertiaLink
             href={href}
-            className={isActive && activeProps?.className ? activeProps.className : className}
+            className={
+                isActive && activeProps?.className
+                    ? activeProps.className
+                    : className
+            }
             {...props}
         />
     );
 }
-
